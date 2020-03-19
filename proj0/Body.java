@@ -65,4 +65,12 @@ public class Body{
         }
         return netForce;
    }
+   public void update(double time, double xForce, double yForce){
+        double aX = xForce / this.mass;
+        double aY = yForce / this.mass;
+        this.xxVel += time * aX;
+        this.yyVel += time*aY;
+        this.xxPos += time*xxVel;
+        this.yyPos += time*yyVel; 
+       }
 }
