@@ -18,9 +18,11 @@ public class Shock{
     }
     public static void main(String[] args){
         Shock gear = new Shock(200);
+        // Should give 300
         System.out.println(gear.bang);
         shrink(gear);
         shrink(starter());
+        // Should give 99
         System.out.println(gear.bang);
     }
 }
