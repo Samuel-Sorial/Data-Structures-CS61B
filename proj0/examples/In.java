@@ -372,7 +372,7 @@ public final class In {
 
     /**
      * Reads all ints from a file 
-     * @deprecated Clearer to use 
+     *  Clearer to use 
      * <tt>new In(filename)</tt>.{@link #readAllInts()}
      */
     public static int[] readInts(String filename) {
@@ -381,7 +381,7 @@ public final class In {
 
    /**
      * Reads all doubles from a file
-     * @deprecated Clearer to use 
+     *  Clearer to use 
      * <tt>new In(filename)</tt>.{@link #readAllDoubles()}
      */
     public static double[] readDoubles(String filename) {
@@ -390,7 +390,7 @@ public final class In {
 
    /**
      * Reads all strings from a file
-     * @deprecated Clearer to use 
+     *  Clearer to use 
      * <tt>new In(filename)</tt>.{@link #readAllStrings()}
      */
     public static String[] readStrings(String filename) {
@@ -399,7 +399,7 @@ public final class In {
 
     /**
      * Reads all ints from stdin 
-     * @deprecated Clearer to use {@link StdIn#readAllInts()}
+     *  Clearer to use {@link StdIn#readAllInts()}
      */
     public static int[] readInts() {
         return new In().readAllInts();
@@ -407,7 +407,7 @@ public final class In {
 
    /**
      * Reads all doubles from stdin
-     * @deprecated Clearer to use {@link StdIn#readAllDoubles()}
+     *  Clearer to use {@link StdIn#readAllDoubles()}
      */
     public static double[] readDoubles() {
         return new In().readAllDoubles();
@@ -415,7 +415,7 @@ public final class In {
 
    /**
      * Reads all strings from stdin
-     * @deprecated Clearer to use {@link StdIn#readAllStrings()}
+     *  Clearer to use {@link StdIn#readAllStrings()}
      */
     public static String[] readStrings() {
         return new In().readAllStrings();
