@@ -37,14 +37,36 @@ public class NBody{
         double radius = readRadius(filename);
         Body[] myBodies = readBodies(filename);
         int bodiesNumber = myBodies.length;
-
+        StdDraw.enableDoubleBuffering();
+        double time = 0;
+        while(time<T){
         StdDraw.setScale(-radius, radius);
 
         StdDraw.clear();
-
+        
         StdDraw.picture(0,0, "images/starfield.jpg");
-        for(Body b : myBodies){
-            b.draw();
+        double[] xForces = new double[bodiesNumber];
+        double[] yForces = new double[bodiesNumber];
+
+        for(int i=0; i<bodiesNumber; i++){
+            xForces[i] = myBodies[i].calcNetForceExertedByX(myBodies);
+            yForces[i] = myBodies[i].calcNetForceExertedByY(myBodies);
         }
+        for(int i =0; i<bodiesNumber; i++){
+            myBodies[i].update(dt, xForces[i], yForces[i]);
+            myBodies[i].draw();
+        }
+        StdDraw.show();
+        StdDraw.pause(10);
+        time += dt;
+    }
+    StdOut.printf("%d\n", myBodies.length);
+    StdOut.printf("%.2e\n", radius);
+    for (int i = 0; i < myBodies.length; i++) {
+    StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
+                  myBodies[i].xxPos, myBodies[i].yyPos, myBodies[i].xxVel,
+                  myBodies[i].yyVel, myBodies[i].mass, myBodies[i].imgFileName);   
+}
+
 }
 }
