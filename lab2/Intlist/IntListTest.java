@@ -56,7 +56,11 @@ public class IntListTest {
         assertEquals(exp, IntList.dcatenate(A, B));
         assertEquals(IntList.of(1, 2, 3, 4, 5, 6), A);
     }
-
+    @Test
+    public void testCopy(){
+        IntList A = IntList.of(1, 2, 3);
+        assertEquals(IntList.copy(A), A);
+    }
     @Test
     public void testCatenate() {
         IntList A = IntList.of(1, 2, 3);
