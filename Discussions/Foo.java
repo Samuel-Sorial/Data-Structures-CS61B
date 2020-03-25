@@ -38,5 +38,6 @@ public class Foo{
         System.out.println(baz.x);
         System.out.println(baz.y);
 
+
     }
 }
