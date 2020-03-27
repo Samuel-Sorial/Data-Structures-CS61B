@@ -4,11 +4,11 @@ public class ArrayDeque<T> {
   @author: Samuel Sorial
   An Array implementation of a deque using double linked lists.
   */
-    T[] items;
-    int nextFirst;
-    int nextLast;
-    int size;
-    double minimumFactor;
+    private T[] items;
+    private int nextFirst;
+    private int nextLast;
+    private int size;
+    private double minimumFactor;
 
     public ArrayDeque(){
         items = (T[]) new Object[8];
@@ -45,7 +45,6 @@ public class ArrayDeque<T> {
         int start = increaseOne(nextFirst);
         for(int i=0, index = start; index != nextLast; index= increaseOne(index), i++){
             newItems[i] = items[index];
-            i++;
         }
         items = newItems;
         nextFirst = newSize - 1;
