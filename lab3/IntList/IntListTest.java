@@ -81,4 +81,17 @@ public class IntListTest {
         assertNull("Not handling nulls",IntList.reverse(null));
     }
 
+    @Test
+    public void testSkippify(){
+        // Test that it skippes the numbers correctly.
+        IntList A = IntList.of(1,2,3,4,5,6,7,8,9,10);
+        IntList expectedA = IntList.of(1,3,6,10);
+        IntList B = IntList.of(9,8,7,6,5,4,3,2,1);
+        IntList expectedB = IntList.of(9,7,4);
+        A.skippify();
+        B.skippify();
+        assertEquals(expectedA, A);
+        assertEquals(expectedB, B);
+    }
+
 }

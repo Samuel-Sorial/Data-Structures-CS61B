@@ -271,5 +271,24 @@ public class IntList {
         out.format(")");
         return out.toString();
     }
+    /*
+    Skip method added at the discussion 3.
+    It skipes the n element, starting from n=1 and increase n by 1 at each step while going.
+     */
+    public void skippify() {
+        IntList p = this;
+        int n = 1;
+        while( p!= null){
+            IntList next = p.rest;
+            for(int i = 0; i<n; i++ ){
+                if(next == null)
+                    break;
+                next = next.rest;
+            }
+            p.rest = next;
+            n++;
+            p = p.rest;
+        }
+    }
 }
 
