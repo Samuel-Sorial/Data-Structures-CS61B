@@ -290,5 +290,30 @@ public class IntList {
             p = p.rest;
         }
     }
+    /** Non-discructively creates a copy of x that contains no occurence of y.*/
+    public static IntList ilsans(IntList x, int y){
+        if(x == null)
+            return null;
+        if(x.first == y)
+            return ilsans(x.rest,y);
+        return new IntList(x.first, ilsans(x.rest,y));
+    }
+    /*
+    Desctructively modify and return x to conain no occurences of y, without using new
+     */
+    public static IntList dislans(IntList x, int y){
+        if(x== null){
+            return null;
+        }
+        x.rest = dislans(x.rest,y);
+        if(x.first == y)
+            return x.rest;
+        return x;
+    }
+
+    public static void main(String[] args){
+        IntList A = IntList.of(1,2,3,4,5,6,7,8);
+        dislans(A,2);
+    }
 }
 
