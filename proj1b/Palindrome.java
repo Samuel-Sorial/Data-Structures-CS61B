@@ -7,26 +7,26 @@ public class Palindrome {
     /*
     @param: String word to be converted to a chars deque.
      */
-    public Deque<Character> wordToDeque(String word){
+    public Deque<Character> wordToDeque(String word) {
         Deque<Character> result = new LinkedListDeque<>();
-        for(char c : word.toCharArray()){
+        for (char c : word.toCharArray()) {
             result.addLast(c);
         }
         return result;
     }
+
     /*
     @param: String word to be checked.
     @return: boolean if it's palindrome or not.
      */
-    public boolean isPalindrome(String word){
-        char[] wordChars = word.toCharArray();
-        int wordLength = wordChars.length;
-        if(wordLength==0 || wordLength==1)
+    public boolean isPalindrome(String word) {
+        Deque<Character> charOfWord = wordToDeque(word);
+        return isPalindromeHelper(charOfWord);
+    }
+
+    private boolean isPalindromeHelper(Deque<Character> deque){
+        if(deque.size() <= 1)
             return true;
-        for(int i=0; i<wordLength/2; i++){
-            if(wordChars[i] != wordChars[wordLength-i-1])
-                return false;
-        }
-        return true;
+        return deque.removeFirst() == deque.removeLast() && isPalindromeHelper(deque);
     }
 }

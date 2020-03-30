@@ -22,7 +22,7 @@ public class TestPalindrome {
         String realPalindrome = "racecar";
         String cornerCase = "";
         String anotherCornerCase = "a";
-        
+
         assertTrue(palindrome.isPalindrome(realPalindrome));
         assertFalse(palindrome.isPalindrome(notPalindrome));
         assertTrue(palindrome.isPalindrome(cornerCase));
