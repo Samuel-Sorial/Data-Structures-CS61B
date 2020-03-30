@@ -28,4 +28,19 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome(cornerCase));
         assertTrue(palindrome.isPalindrome(anotherCornerCase));
     }
+
+    @Test
+    public void testIsPalindromeComperator(){
+        OffByOne offByOne = new OffByOne();
+        assertTrue(palindrome.isPalindrome("", offByOne));
+        assertTrue(palindrome.isPalindrome("a", offByOne));
+        assertTrue(palindrome.isPalindrome("flake", offByOne));
+        assertTrue(palindrome.isPalindrome("zyzy", offByOne));
+        assertTrue(palindrome.isPalindrome("yyxz", offByOne));
+        assertTrue(palindrome.isPalindrome("yyyxz", offByOne));
+        assertFalse(palindrome.isPalindrome("aa", offByOne));
+        assertFalse(palindrome.isPalindrome("xyz", offByOne));
+        assertFalse(palindrome.isPalindrome("aa", offByOne));
+        assertFalse(palindrome.isPalindrome("zxzx", offByOne));
+    }
 }
