@@ -22,7 +22,7 @@ public class NaiveMinPQ<T> implements ExtrinsicMinPQ<T> {
     /** Note this method does not throw the proper exception,
      *  otherwise it is painfully slow (linear time).
      */
-    @Override
+    @oOverride
     public void add(T item, double priority) {
         items.add(new PriorityNode(item, priority));
     }
