@@ -31,16 +31,19 @@ public class TestPalindrome {
 
     @Test
     public void testIsPalindromeComperator(){
-        OffByOne offByOne = new OffByOne(1);
+        OffByOne offByOne = new OffByOne();
         assertTrue(palindrome.isPalindrome("", offByOne));
         assertTrue(palindrome.isPalindrome("a", offByOne));
         assertTrue(palindrome.isPalindrome("flake", offByOne));
-        assertTrue(palindrome.isPalindrome("zyzy", offByOne));
-        assertTrue(palindrome.isPalindrome("yyxz", offByOne));
-        assertTrue(palindrome.isPalindrome("yyyxz", offByOne));
+        assertTrue(palindrome.isPalindrome("abcb", offByOne));
+        assertTrue(palindrome.isPalindrome("bcdc", offByOne));
+        assertTrue(palindrome.isPalindrome("mersfn", offByOne));
         assertFalse(palindrome.isPalindrome("aa", offByOne));
         assertFalse(palindrome.isPalindrome("xyz", offByOne));
         assertFalse(palindrome.isPalindrome("aa", offByOne));
-        assertFalse(palindrome.isPalindrome("zxzx", offByOne));
+
+        OffByN offByN = new OffByN(3);
+
+        assertTrue(palindrome.isPalindrome("flaoi",offByN));
     }
 }
