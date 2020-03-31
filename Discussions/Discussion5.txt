@@ -49,6 +49,18 @@ public class OfficeHoursQueue implements Iterable<OHRequest>{
         Iterator<OHRequest> iterator = new OHIterator<>(item);
         return iterator;
     }
-
-
 }
+
+
+public class OfficeHoursQueue throws NoSuchElementException{
+    public static void main(String[] args){
+        OHRequest s1 = new OHRequest("Fail);
+        ................... dummy elements;
+
+        for(OHRequest r : s5){
+            System.out.println(r);
+        }
+    }
+}
+
+
