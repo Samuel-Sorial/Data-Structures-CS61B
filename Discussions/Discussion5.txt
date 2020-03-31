@@ -1,0 +1,54 @@
+1 Iterators Warmup:
+1- It would ask us to impelement Iterator() method which returns Iterator<>. 
+The signature: public Iterator<T> Iterator(){};
+
+2- We should implement: hasNext() , and next() methods. These two methods signature:
+public boolean hasNext(){}; public T next(){};
+
+3- The difference between Iterator and Iterable is that the Iterable should give us an iterator which is used to iterate at the type itself.
+
+
+2- OHQueue
+
+public class OHIterator impelements Iterator<OHIterator{
+    
+    OHRequest curr;
+
+    public OHIterator(OHRequest queue){
+        curr = queue;
+    }
+
+    public boolean hasNext(){
+        while(!isGood(curr.description) && curr.next != null)
+            curr = curr.next;
+        return curr != null;
+    }
+
+    public OHRequest next(){
+        if(!hasNext())
+            return NoSuchElementException;
+        OHRequest result = curr;
+        curr = curr.next;
+        return OHRequest;
+    }
+
+    public boolean isGood(String description){
+        return description != null && description.length>5;
+    }
+}
+
+public class OfficeHoursQueue implements Iterable<OHRequest>{
+
+    OHRequest item;
+
+    public OfficeHoursQueue(OHRequest queue){
+        item = queue;
+    }
+
+    public Iterator<OHRequest> iterator(){
+        Iterator<OHRequest> iterator = new OHIterator<>(item);
+        return iterator;
+    }
+
+
+}
