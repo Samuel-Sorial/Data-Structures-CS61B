@@ -30,6 +30,10 @@ public class Plip extends Creature {
      */
     private int b;
 
+    private final static double INCREASE_RATE = .2;
+
+    private final static double DECREASE_RATE = .15;
+
     /**
      * creates plip with energy equal to E.
      */
@@ -57,7 +61,9 @@ public class Plip extends Creature {
      * that you get this exactly correct.
      */
     public Color color() {
-        g = 63;
+        r = 99;
+        b = 76;
+        g = (int) (96.0 * energy + 63.0);
         return color(r, g, b);
     }
 
@@ -74,7 +80,9 @@ public class Plip extends Creature {
      * private static final variable. This is not required for this lab.
      */
     public void move() {
-        // TODO
+        energy -= DECREASE_RATE;
+        if(energy<0)
+            energy = 0;
     }
 
 
@@ -82,7 +90,9 @@ public class Plip extends Creature {
      * Plips gain 0.2 energy when staying due to photosynthesis.
      */
     public void stay() {
-        // TODO
+        energy += INCREASE_RATE;
+        if(energy > 2)
+            energy = 2;
     }
 
     /**
