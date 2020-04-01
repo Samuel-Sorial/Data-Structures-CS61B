@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * An implementation of a motile pacifist photosynthesizer.
@@ -33,6 +34,8 @@ public class Plip extends Creature {
     private final static double INCREASE_RATE = .2;
 
     private final static double DECREASE_RATE = .15;
+
+    private final static double MOVE_PROBABILITY = .5;
 
     /**
      * creates plip with energy equal to E.
@@ -101,7 +104,9 @@ public class Plip extends Creature {
      * Plip.
      */
     public Plip replicate() {
-        return this;
+        Plip child = new Plip(energy/2);
+        this.energy /= 2;
+        return child;
     }
 
     /**
@@ -120,21 +125,28 @@ public class Plip extends Creature {
     public Action chooseAction(Map<Direction, Occupant> neighbors) {
         // Rule 1
         Deque<Direction> emptyNeighbors = new ArrayDeque<>();
-        boolean anyClorus = false;
-        // TODO
-        // (Google: Enhanced for-loop over keys of NEIGHBORS?)
-        // for () {...}
-
-        if (false) { // FIXME
-            // TODO
+        boolean anyClorus = false;   // Dummy value
+        for(Direction direction : neighbors.keySet()){
+            if(neighbors.get(direction).name().equals("empty"))
+                emptyNeighbors.add(direction);
+            else if (neighbors.get(direction).name().equals("clorus"))
+                anyClorus = true;
         }
-
-        // Rule 2
-        // HINT: randomEntry(emptyNeighbors)
-
-        // Rule 3
-
-        // Rule 4
-        return new Action(Action.ActionType.STAY);
+        if(emptyNeighbors.isEmpty())
+            return new Action(Action.ActionType.STAY);
+        else if(energy >= 1.0)
+            return new Action(Action.ActionType.REPLICATE, randomDirection(emptyNeighbors));
+        else if(anyClorus)
+            return new Action(Action.ActionType.MOVE,randomDirection(emptyNeighbors));
+        else
+            return new Action(Action.ActionType.STAY);
+    }
+    private Direction randomDirection(Deque<Direction> emptyNeighbours){
+        Random random = new Random();
+        int index = random.nextInt(emptyNeighbours.size()); //Choose randomly any index from 0 (inclusively) to the size (exclusively)
+        Direction d = emptyNeighbours.getFirst(); // Dummy value
+        for(int i =0; i<index; i++)
+            d = emptyNeighbours.getFirst();
+        return d;
     }
 }
