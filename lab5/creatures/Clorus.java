@@ -1,14 +1,16 @@
 package creatures;
+
 import huglife.Creature;
 import huglife.Direction;
 import huglife.Action;
 import huglife.Occupant;
+import static huglife.HugLifeUtils.randomEntry;
 
 import java.awt.Color;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
-import java.util.Random;
+
     /**
     @author : Samuel-Sorial
     */
@@ -80,22 +82,13 @@ public class Clorus extends Creature  {
         if(emptyPlaces.isEmpty())
             return new Action(Action.ActionType.STAY);
         else if(!pliplsPlaces.isEmpty())
-            return new Action(Action.ActionType.ATTACK,randomDirection(pliplsPlaces));
+            return new Action(Action.ActionType.ATTACK,randomEntry(pliplsPlaces));
         else if (this.energy >=1)
-            return new Action(Action.ActionType.REPLICATE, randomDirection(emptyPlaces));
+            return new Action(Action.ActionType.REPLICATE, randomEntry(emptyPlaces));
         else
-            return new Action(Action.ActionType.MOVE, randomDirection(emptyPlaces));
+            return new Action(Action.ActionType.MOVE, randomEntry(emptyPlaces));
     }
 
-
-    private Direction randomDirection(Deque<Direction> emptyNeighbours){
-            Random random = new Random();
-            int index = random.nextInt(emptyNeighbours.size()); //Choose randomly any index from 0 (inclusively) to the size (exclusively)
-            Direction d = emptyNeighbours.getFirst(); // Dummy value
-            for(int i =0; i<index; i++)
-                d = emptyNeighbours.getFirst();
-            return d;
-        }
     @Override
     public Color color() {
         r = 34;
