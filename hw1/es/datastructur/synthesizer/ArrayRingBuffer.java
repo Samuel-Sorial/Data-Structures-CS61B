@@ -47,6 +47,8 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      */
     @Override
     public void enqueue(T x) {
+        if(isFull())
+            throw new RuntimeException("Ring Buffer Overflow");
         rb[last] = x;
         last = increaseOne(last);
         fillCount++;
@@ -58,6 +60,8 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      */
     @Override
     public T dequeue() {
+        if(isEmpty())
+            throw new RuntimeException("Ring Buffer Underflow");
         T result = rb[first];
         first = increaseOne(first);
         return result;
@@ -69,11 +73,50 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      */
     @Override
     public T peek() {
+        if(isEmpty())
+            throw new RuntimeException("Ring Buffer Underflow");
         T result = rb[first];
         return result;
     }
 
-    // TODO: When you get to part 4, implement the needed code to support
-    //       iteration and equals.
+    @Override
+    public Iterator<T> iterator() {
+        MyIterator iterator = new MyIterator();
+        return iterator;
+    }
+
+    private class MyIterator implements Iterator<T>{
+        int count = 0;
+        int pos = first;
+
+        @Override
+        public boolean hasNext() {
+            return count < fillCount;
+        }
+
+        @Override
+        public T next() {
+            T item = rb[pos];
+            pos = increaseOne(pos);
+            count++;
+            return item;
+        }
+    }
+    @Override
+    public boolean equals(Object other){
+        if(other == this)
+            return true;
+        else if(other == null)
+            return false;
+        else if(other.getClass() != ArrayRingBuffer.class)
+            return false;
+        ArrayRingBuffer<T> arr = (ArrayRingBuffer<T>) other;
+        Iterator<T> iterator1 = this.iterator();
+        Iterator<T> iterator2 = arr.iterator();
+        while(iterator1.hasNext()) {
+            if (iterator1.next() != iterator2.next())
+                return false;
+        }
+        return true;
+    }
 }
-    // TODO: Remove all comments that say TODO when you're done.
