@@ -25,7 +25,7 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
         fillCount = 0;
     }
     private int increaseOne(int number){
-        if(number == rb.length)
+        if(number == rb.length-1)
             return 0;
         else
             return number+1;
