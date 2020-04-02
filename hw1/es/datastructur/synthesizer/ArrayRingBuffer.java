@@ -1,10 +1,5 @@
 package es.datastructur.synthesizer;
 import java.util.Iterator;
-
-//TODO: Make sure to that this class and all of its methods are public
-//TODO: Make sure to add the override tag for all overridden methods
-//TODO: Make sure to make this class implement BoundedQueue<T>
-
 /**
  * @author : Samuel Sorial
  * @param <T>
@@ -24,18 +19,26 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      * Create a new ArrayRingBuffer with the given capacity.
      */
     public ArrayRingBuffer(int capacity) {
-        // TODO: Create new array with capacity elements.
-        //       first, last, and fillCount should all be set to 0.
+        rb =  (T[])  new Object[capacity];
+        first = 0;
+        last = 0;
+        fillCount = 0;
+    }
+    private int increaseOne(int number){
+        if(number == rb.length)
+            return 0;
+        else
+            return number+1;
     }
 
     @Override
     public int capacity() {
-        return 0;
+        return rb.length;
     }
 
     @Override
     public int fillCount() {
-        return 0;
+        return fillCount;
     }
 
     /**
@@ -44,9 +47,9 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      */
     @Override
     public void enqueue(T x) {
-        // TODO: Enqueue the item. Don't forget to increase fillCount and update
-        //       last.
-        return;
+        rb[last] = x;
+        last = increaseOne(last);
+        fillCount++;
     }
 
     /**
@@ -55,9 +58,9 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      */
     @Override
     public T dequeue() {
-        // TODO: Dequeue the first item. Don't forget to decrease fillCount and
-        //       update first.
-        return null;
+        T result = rb[first];
+        first = increaseOne(first);
+        return result;
     }
 
     /**
@@ -66,9 +69,8 @@ public class ArrayRingBuffer<T>  implements BoundedQueue<T> {
      */
     @Override
     public T peek() {
-        // TODO: Return the first item. None of your instance variables should
-        //       change.
-        return null;
+        T result = rb[first];
+        return result;
     }
 
     // TODO: When you get to part 4, implement the needed code to support
