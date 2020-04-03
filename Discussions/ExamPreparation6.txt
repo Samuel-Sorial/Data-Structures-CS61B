@@ -1,0 +1,2 @@
+1- Disjoint sets:
+A-It can't be, there is not path compression done also the tree size under 1 is too big to be done with wieghted.
