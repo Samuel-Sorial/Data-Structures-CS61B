@@ -55,7 +55,7 @@ public class UnionFind {
         if(root1 == root2)
             return;
         else if(sizes[root1] > sizes[root2]){
-            elements[v2] = root1;
+            elements[v2] = v1;
             sizes[root1] += sizes[root2];
         }
         else{
