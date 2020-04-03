@@ -1,2 +1,25 @@
 1- Disjoint sets:
 A-It can't be, there is not path compression done also the tree size under 1 is too big to be done with wieghted.
+B- It can't be, because 0 is bigger than 9 tree.
+C- Impossible, tree height is too big, it should had appended it to the root directly not the child.
+D- Possible
+E- Impossible, the height of 1-6-8-9 is bigger than the height of the bigger root 
+F- Impossible, the height of root at 1 is bigger than the height of the parent of root 1 : 0
+
+2- Weighted Quck Union:
+a- Impossible
+b- 2,0 -> 4,2 -> 6,2 -> 3,5 -> 3,4
+c- Quck find, Quick union, Weighted Quick union, Weighted Quick union with path compression.
+
+
+3-
+
+1- i++
+2- i*2
+3- i += N
+
+4-
+
+N^2*log N
+
+N
