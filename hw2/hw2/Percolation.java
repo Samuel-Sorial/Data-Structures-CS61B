@@ -16,6 +16,10 @@ public class Percolation {
     private int openedSites;
     private int widthAndHeight;
 
+    /**
+     *
+     * @param N which gives N*N Percolation
+     */
     public Percolation (int N){
         if(N < 0)
             throw new IllegalArgumentException("The width and height can't be negative");
@@ -24,11 +28,23 @@ public class Percolation {
         widthAndHeight = N-1;
         openedSites = 0;
     }
+
+    /**
+     * Opens a specific point
+     * @param row
+     * @param col
+     */
     public void open(int row, int col){
         xyElements[row][col] = true;
         connectOthers(row,col);
         openedSites++;
     }
+
+    /**
+     * Connect to other neighbours
+     * @param row
+     * @param col
+     */
     private void connectOthers(int row, int col){
         int[] neighbours = findNeighbours(row, col);
         for(int i : neighbours){
@@ -38,16 +54,34 @@ public class Percolation {
         }
     }
 
+    /**
+     * Connect these two neighbours
+     * @param row
+     * @param col
+     * @param otherNumber
+     */
     private void makeSet(int row, int col, int otherNumber){
         int first = findNumberOfElement(row,col);
         opens.union(first,otherNumber);
     }
+
+    /**
+     * Find the row and col from the number
+     * @param i
+     * @return
+     */
     private int[] findCurrentIndecies(int i){
         int col = i % (widthAndHeight+1);
         int row = (i - col) /(widthAndHeight+1);
         return new int[] {row,col};
     }
 
+    /**
+     * find the neighbours of this cell
+     * @param row
+     * @param col
+     * @return the neighbours
+     */
     private int[] findNeighbours(int row, int col){
         List<Integer> neighboursList = new ArrayList<>();
         if(row == 0){
@@ -95,9 +129,21 @@ public class Percolation {
         return result;
     }
 
+    /**
+     * @param row
+     * @param col
+     * @return  the state of this cell
+     */
     public boolean isOpen(int row, int col){
         return xyElements[row][col];
     }
+
+    /**
+     *
+     * @param row
+     * @param col
+     * @return if it has something in or not
+     */
     public boolean isFull(int row, int col){
         if(!xyElements[row][col])
             return false;
@@ -109,12 +155,18 @@ public class Percolation {
         return false;
     }
 
-
+    /**
+     *
+     * @return number of opened sites, that is not the same number of full cells
+     */
     public int numberOfOpenSites(){
         return openedSites;
     }
 
-
+    /**
+     *
+     * @return if the total grid is percolating or not
+     */
     public boolean percolates(){
         for(int i = 0; i<xyElements.length; i++){
             if(isFull(widthAndHeight,i))
@@ -122,6 +174,13 @@ public class Percolation {
         }
         return false;
     }
+
+    /**
+     *
+     * @param row
+     * @param col
+     * @return the number of the element calculated from it's position.
+     */
     private int findNumberOfElement(int row, int col){
         return row*(widthAndHeight+1) + col;
     }
