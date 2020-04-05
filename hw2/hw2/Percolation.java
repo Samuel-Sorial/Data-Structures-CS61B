@@ -2,104 +2,130 @@ package hw2;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
  * @author : Samuel-Sorial
  */
 public class Percolation {
 
-    private WeightedQuickUnionUF connections;
-    private int[][] cells;
-    private final int MAIN_CONNECTION;
-    private int connectedSites;
-    /**
-     * Makes a grid N by N and intialize it with closed.
-     * @param N
-     */
-    public Percolation(int N ){
-        cells = new int[N][N];
-        int numberInsideEachCell = 0;
-        for(int i = 0; i<N; i++) {
-            for (int j = 0; j < N; j++){
-                cells[i][j] = numberInsideEachCell;
-                numberInsideEachCell++;
+    private boolean[][] xyElements;
+    private WeightedQuickUnionUF opens;
+    private int openedSites;
+    private int widthAndHeight;
+
+    public Percolation (int N){
+        if(N < 0)
+            throw new IllegalArgumentException("The width and height can't be negative");
+        xyElements = new boolean[N][N];
+        opens = new WeightedQuickUnionUF(N*N+1);
+        widthAndHeight = N-1;
+        openedSites = 0;
+    }
+    public void open(int row, int col){
+        xyElements[row][col] = true;
+        connectOthers(row,col);
+        openedSites++;
+    }
+    private void connectOthers(int row, int col){
+        int[] neighbours = findNeighbours(row, col);
+        for(int i : neighbours){
+            int[] place = findCurrentIndecies(i);
+            if(isOpen(place[0],place[1]))
+                makeSet(row,col,i);
+        }
+    }
+
+    private void makeSet(int row, int col, int otherNumber){
+        int first = findNumberOfElement(row,col);
+        opens.union(first,otherNumber);
+    }
+    private int[] findCurrentIndecies(int i){
+        int col = i % (widthAndHeight+1);
+        int row = (i - col) /(widthAndHeight+1);
+        return new int[] {row,col};
+    }
+
+    private int[] findNeighbours(int row, int col){
+        List<Integer> neighboursList = new ArrayList<>();
+        if(row == 0){
+            if(col == 0){
+                neighboursList.add(findNumberOfElement(row,col+1));
+                neighboursList.add(findNumberOfElement(row+1,col));
+            }else if(col == widthAndHeight){
+                neighboursList.add(findNumberOfElement(row,col-1));
+                neighboursList.add(findNumberOfElement(row+1, col));
+            }else{
+                neighboursList.add(findNumberOfElement(row+1,col));
+                neighboursList.add(row,col+1);
+                neighboursList.add(row,col-1);
             }
+        }else if(row == widthAndHeight){
+            if(col == 0){
+                neighboursList.add(findNumberOfElement(row,col+1));
+                neighboursList.add(findNumberOfElement(row-1,col));
+            }else if(col == widthAndHeight){
+                neighboursList.add(findNumberOfElement(row,col-1));
+                neighboursList.add(findNumberOfElement(row-1, col));
+            }else{
+                neighboursList.add(findNumberOfElement(row-1,col));
+                neighboursList.add(findNumberOfElement(row,col+1));
+                neighboursList.add(findNumberOfElement(row,col-1));
+            }
+        }else if(col == 0){
+            neighboursList.add(findNumberOfElement(row+1,col));
+            neighboursList.add(findNumberOfElement(row-1,col));
+            neighboursList.add(findNumberOfElement(row,col+1));
+        }else if(col == widthAndHeight){
+            neighboursList.add(findNumberOfElement(row,col-1));
+            neighboursList.add(findNumberOfElement(row-1,col));
+            neighboursList.add(findNumberOfElement(row+1,col));
+        }else{
+            neighboursList.add(findNumberOfElement(row,col+1));
+            neighboursList.add(findNumberOfElement(row,col-1));
+            neighboursList.add(findNumberOfElement(row-1,col));
+            neighboursList.add(findNumberOfElement(row+1,col));
         }
-        connections = new WeightedQuickUnionUF(N*N+1);
-        MAIN_CONNECTION = N*N+1;
-        connectedSites = 0;
+        int[] result = new int[neighboursList.size()];
+        for(int i=0; i<result.length; i++){
+            result[i] = neighboursList.get(i);
+        }
+        return result;
     }
 
-    /**
-     * Opens a given point
-     * @param row
-     * @param col
-     */
-    public void open(int row, int col) {
-        if (isFull(row, col)) {
-            int currCell = cells[row][col];
-            connections.union(currCell, MAIN_CONNECTION);
-            connectedSites++;
-        }
-    }
-    /**
-     * @param row
-     * @param col
-     * @retur the state of a given point
-     */
     public boolean isOpen(int row, int col){
-        return connections.connected(MAIN_CONNECTION,cells[row][col]);
+        return xyElements[row][col];
     }
-    /**
-     *
-     * @param row
-     * @param col
-     * @return if the grid is full or not
-     */
     public boolean isFull(int row, int col){
-        return connections.connected(cells[row][col],MAIN_CONNECTION);
-    }
-    /**
-     *
-     * @return the number of the opened sites
-     */
-    public int numberOfOpensSites(){
-        return connectedSites;
-    }
-
-    /**
-     * @return if the mode percolates or not
-     */
-    public boolean percolates(){
-        int bottomRow = cells.length;
-        return isRowConnected(bottomRow-1) && isRowConnected(0);
-    }
-
-    private boolean isRowConnected(int row){
-        for(int i : cells[row]){
-            if(connections.connected(i,MAIN_CONNECTION))
+        if(!xyElements[row][col])
+            return false;
+        int numberOfElement = findNumberOfElement(row,col);
+        for(int i = 0; i< xyElements.length; i++){
+            if(opens.connected(findNumberOfElement(0,i),numberOfElement))
                 return true;
         }
         return false;
     }
 
-    /**
-     * Do nothing, it's just here to let the autograder do its mission.
-     * @param args
-     */
-    public static void main(String[] args){
-        Percolation test = new Percolation(4);
-        test.numberOfOpensSites();
-        test.percolates();
-        test.isFull(1,2);
-        test.isOpen(1,2);
-        test.open(1,2);
-        test.percolates();
-        test.open(0,0);
-        test.open(3,2);
-        test.isOpen(3,2);
-        test.isFull(3,2);
-        test.percolates();
-        test.open(2,3);
+
+    public int numberOfOpenSites(){
+        return openedSites;
     }
 
+
+    public boolean percolates(){
+        for(int i = 0; i<xyElements.length; i++){
+            if(isFull(widthAndHeight,i))
+                return true;
+        }
+        return false;
+    }
+    private int findNumberOfElement(int row, int col){
+        return row*(widthAndHeight+1) + col;
+    }
+    public static void main(String[] args){
+
+    }
 }
