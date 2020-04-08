@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="javalib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/stdlib-package.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/xchart-3.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/stdlib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/jh61b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library-sp19/library-sp19-master/javalib/algs4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

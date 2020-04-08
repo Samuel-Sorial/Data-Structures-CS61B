@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Discussions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clab11" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clab7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clab8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clab9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw0" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab11" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab2setup" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj0" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj1a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj1b" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj1gold" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj2ab" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj2c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proj3" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="proj2c" level="project" />
+    <orderEntry type="library" name="javalib" level="project" />
+  </component>
+</module>

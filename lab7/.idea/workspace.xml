@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8848b4f-4a0f-4a38-8706-64fb65284543" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/InsertRandomSpeedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InsertRandomSpeedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/CS61B.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +110,7 @@
       <workItem from="1586356141506" duration="7290000" />
       <workItem from="1586374246677" duration="39000" />
       <workItem from="1586375935027" duration="18000" />
+      <workItem from="1586384084543" duration="5000" />
     </task>
     <servers />
   </component>
@@ -136,10 +141,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586369761592" />
-    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1586375932640">
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1586384084603">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586375932640" />
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586384084603" />
     <state x="2544" y="245" key="run.anything.popup" timestamp="1586358568932">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
