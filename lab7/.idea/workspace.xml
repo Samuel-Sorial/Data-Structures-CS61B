@@ -1,67 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8848b4f-4a0f-4a38-8706-64fb65284543" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/CS61B.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="6532ceb5-90b4-45a2-848b-666a875d24b4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/lab7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBSTMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestBSTMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1aGJkOSeLJYTrEDAyLOWmk89DlN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1aHFnzi9D3mVsrslX4YXcF1ROUS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../library-sp19-master/javalib/xchart-3.5.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager" selected="Application.InsertInOrderSpeedTest">
     <configuration name="InsertInOrderSpeedTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="InsertInOrderSpeedTest" />
-      <module name="lab7" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertRandomSpeedTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="InsertRandomSpeedTest" />
-      <module name="lab7" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestBSTMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestBSTMap" />
       <module name="lab7" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,23 +54,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBSTMap.sanityGenericsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab7" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestBSTMap" />
-      <option name="METHOD_NAME" value="sanityGenericsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.InsertInOrderSpeedTest" />
-        <item itemvalue="Application.InsertRandomSpeedTest" />
-        <item itemvalue="Application.TestBSTMap" />
         <item itemvalue="JUnit.TestBSTMap.sanityClearTest" />
-        <item itemvalue="JUnit.TestBSTMap.sanityGenericsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -102,52 +66,35 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f8848b4f-4a0f-4a38-8706-64fb65284543" name="Default Changelist" comment="" />
-      <created>1586356139681</created>
+      <changelist id="6532ceb5-90b4-45a2-848b-666a875d24b4" name="Default Changelist" comment="" />
+      <created>1586384782483</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1586356139681</updated>
-      <workItem from="1586356141506" duration="7290000" />
-      <workItem from="1586374246677" duration="39000" />
-      <workItem from="1586375935027" duration="18000" />
-      <workItem from="1586384084543" duration="5000" />
+      <updated>1586384782483</updated>
+      <workItem from="1586384784472" duration="91000" />
+      <workItem from="1586385012292" duration="69000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="2688" y="252" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1586357998249">
+    <state x="2502" y="286" width="735" height="520" key="FileChooserDialogImpl" timestamp="1586385072596">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2688" y="252" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586357998249" />
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1586369761592">
+    <state x="2502" y="286" width="735" height="520" key="FileChooserDialogImpl/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586385072596" />
+    <state x="2363" y="117" width="1024" height="852" key="SettingsEditor" timestamp="1586385079284">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586369761592" />
-    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1586369761592">
+    <state x="2363" y="117" width="1024" height="852" key="SettingsEditor/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586385079284" />
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1586385011531">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.center/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586369761592" />
-    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1586369761592">
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586385011531" />
+    <state x="2552" y="436" width="646" height="215" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586384806823">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.left/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586369761592" />
-    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1586369761592">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586369761592" />
-    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1586384084603">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586384084603" />
-    <state x="2544" y="245" key="run.anything.popup" timestamp="1586358568932">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2544" y="245" key="run.anything.popup/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586358568932" />
+    <state x="2552" y="436" width="646" height="215" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586384806823" />
   </component>
 </project>
