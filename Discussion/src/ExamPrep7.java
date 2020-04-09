@@ -8,6 +8,16 @@ public class ExamPrep7 {
      * N
      * 1
      * N^2
+     *
+     *
+     * 2-
+     * N^2
+     * N^2
+     *
+     *
+     * 3-
+     *                2        7
+     *             1    3 5       8 9
      */
 
     public static void main(String[] args){

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39e9f883-df83-4fd8-8512-d459674a1811" name="Default Changelist" comment="">
+    <list default="true" id="39e9f883-df83-4fd8-8512-d459674a1811" name="Default Changelist" comment="Everything is working again after the conflicts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BSTMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/BSTMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectId" id="1aJiaOpzj0LLp3e413GUWyNTBjx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,6 +20,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../library-sp19-master/javalib/xchart-3.5.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -36,7 +39,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586390288921</updated>
-      <workItem from="1586390290749" duration="201000" />
+      <workItem from="1586390290749" duration="242000" />
+      <workItem from="1586460168416" duration="29000" />
+      <workItem from="1586460231411" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1586390400551</created>
@@ -45,7 +50,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586390400551</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Everything is working again after the conflicts">
+      <created>1586390511389</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586390511389</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -53,16 +65,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="Everything is working again after the conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything is working again after the conflicts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2442" y="84" width="865" height="919" key="CommitChangelistDialog2" timestamp="1586390400392">
+    <state x="2442" y="84" width="865" height="919" key="CommitChangelistDialog2" timestamp="1586390541448">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2442" y="84" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586390400392" />
-    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586390414865">
+    <state x="2442" y="84" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586390541448" />
+    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586390552299">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586390414865" />
+    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586390552299" />
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1586460255096">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586460255096" />
   </component>
 </project>
