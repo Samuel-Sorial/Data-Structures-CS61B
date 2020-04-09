@@ -1,7 +1,7 @@
-import org.knowm.xchart.SwingWrapper;
+
 import org.knowm.xchart.XYChart;
 import org.knowm.xchart.XYChartBuilder;
-
+import org.knowm.xchart.SwingWrapper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

@@ -15,7 +15,7 @@ public class ExperimentHelper {
      *  N = 8, OIPL: 13
      */
     public static int optimalIPL(int N) {
-        return 0;
+        return (int)  optimalAverageDepth(N) * N;
     }
 
     /** Returns the average depth for nodes in an optimal BST of
