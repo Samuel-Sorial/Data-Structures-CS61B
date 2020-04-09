@@ -2,8 +2,8 @@ import java.util.Set;
 import java.util.Iterator;
 
 public class BSTMap<K extends Comparable<K>, V> implements Map61B<K, V> {
-    private BST root;
 
+    private BST root;
     private class BST {
         private K key;
         private V value;
