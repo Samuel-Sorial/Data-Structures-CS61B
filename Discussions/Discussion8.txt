@@ -1,0 +1,23 @@
+1-
+1.1 draw
+1.2 draw 
+1.3 2H+2
+
+2- 2.1:
+1- awful one because all of them will have the same hash code
+2- valid but awful too, every number in it's negative will get the same hashcode
+3- invalid because it will return memory addresses.
+
+2.2:
+a- Never
+b- Always
+
+3-
+3.1: 
+          d
+        h   f
+array representation: 0 1 2
+                      d h f
+
+3.2
+
