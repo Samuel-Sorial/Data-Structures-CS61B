@@ -88,7 +88,16 @@ public class MyTrieSet implements  TrieSet61B{
 
     @Override
     public String longestPrefixOf(String key) {
-        return null;
+        List<String> allPrefixes = keysWithPrefix(key);
+        int biggest = 0;
+        String biggerString = null;
+        for(String s : allPrefixes){
+            if(s.length() > biggest){
+                biggest = s.length();
+                biggerString = s;
+            }
+        }
+        return biggerString;
     }
 
     private class DataIndexedCharMap{
