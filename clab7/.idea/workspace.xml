@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8451d3e-0c2f-4903-8789-d25ef9ca0177" name="Default Changelist" comment="" />
+    <list default="true" id="6e4eeb42-c699-4383-b76d-0092aba8c3d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Discussion/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Discussion/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Discussion/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Discussion/Discussion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Discussion/Discussion.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,14 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1aGJawiFlNemjplR6cllr8jC8eZ" />
+  <component name="ProjectId" id="1aJzek9s88M6sJEHRRlfero9DDf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,22 +26,93 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../library-sp19-master/javalib/xchart-3.5.1.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ChartDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChartDemo" />
+      <module name="clab7" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChartDemo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b8451d3e-0c2f-4903-8789-d25ef9ca0177" name="Default Changelist" comment="" />
-      <created>1586356063599</created>
+      <changelist id="6e4eeb42-c699-4383-b76d-0092aba8c3d8" name="Default Changelist" comment="" />
+      <created>1586467574161</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1586356063599</updated>
-      <workItem from="1586356066067" duration="62000" />
+      <updated>1586467574161</updated>
+      <workItem from="1586467575934" duration="941000" />
+      <workItem from="1586468588753" duration="311000" />
+      <workItem from="1586535699417" duration="5000" />
     </task>
+    <task id="LOCAL-00001" summary="Editing the challenge">
+      <created>1586468674826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586468674826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Editing the challenge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Editing the challenge" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2445" y="116" width="860" height="854" key="CommitChangelistDialog2" timestamp="1586468674452">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2445" y="116" width="860" height="854" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468674452" />
+    <state x="2502" y="286" width="735" height="534" key="FileChooserDialogImpl" timestamp="1586468398485">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2502" y="286" width="735" height="534" key="FileChooserDialogImpl/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468398485" />
+    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1586468515980">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="284" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468515980" />
+    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1586468515980">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="284" key="GridCell.Tab.0.center/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468515980" />
+    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1586468515980">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="284" key="GridCell.Tab.0.left/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468515980" />
+    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1586468515980">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468515980" />
+    <state x="2363" y="117" width="1024" height="852" key="SettingsEditor" timestamp="1586468403463">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2363" y="117" width="1024" height="852" key="SettingsEditor/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468403463" />
+    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586468682083">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586468682083" />
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1586535700032">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586535700032" />
   </component>
 </project>
