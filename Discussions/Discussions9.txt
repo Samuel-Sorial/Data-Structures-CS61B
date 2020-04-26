@@ -10,3 +10,12 @@ INDEX, INCH, INFO
 indent: branch from E : n - t
 inches: branch from inch : e - s
 trie: branch from the root: t - r - i - e
+Extra: whenever we  add a new key, we add +1 to all of the previous elements at this branch of trie.
+
+3-                                                 (5,6)
+                                            L                R
+                                          (4,9)            (7,3)
+                                       U         D      U        D
+                                     null      (1,5)  (8,7)     (9,1)
+
+The draw is in another picture.
