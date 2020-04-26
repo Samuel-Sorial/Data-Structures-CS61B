@@ -14,8 +14,8 @@ Extra: whenever we  add a new key, we add +1 to all of the previous elements at 
 
 3-                                                 (5,6)
                                             L                R
-                                          (4,9)            (7,3)
+                                          (1,5)           (7,3)
                                        U         D      U        D
-                                     null      (1,5)  (8,7)     (9,1)
+                                     (4,9)     (2,2)  (8,7)     (9,1)
 
 The draw is in another picture.
