@@ -8,12 +8,17 @@ import java.util.List;
 public class TestMyTrieSet {
 
     @Test
-    public void addTest(){
+    public void sanityAddTest(){
         MyTrieSet t = new MyTrieSet();
         t.add("hello");
         t.add("hi");
         t.add("help");
         t.add("zebra");
+        t.add("same");
+        assertTrue(t.contains("same"));
+        t.add("sam");
+        assertTrue(t.contains("same"));
+        assertTrue(t.contains("sam"));
         assertTrue(t.contains("zebra"));
     }
     // assumes add/contains work
@@ -62,11 +67,6 @@ public class TestMyTrieSet {
             assertFalse(keys.contains(s));
         }
     }
-
-    public static void main(String[] args) {
-        jh61b.junit.TestRunner.runTests(TestMyTrieSet.class);
-    }
-
 
 
 }
