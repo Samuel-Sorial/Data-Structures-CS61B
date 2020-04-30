@@ -1,5 +1,3 @@
-package bearmaps;
-
 /**
  * Created by hug.
  */

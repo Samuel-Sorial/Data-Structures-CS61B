@@ -1,4 +1,3 @@
-package bearmaps;
 /**
  * Priority queue where objects have a priority that is provided
  * extrinsically, i.e. are are supplied as an argument during insertion
@@ -6,7 +5,7 @@ package bearmaps;
  */
 public interface ExtrinsicMinPQ<T> {
     /* Adds an item with the given priority value. Throws an
-     * IllegalArgumentExceptionb if item is already present.
+     * IllegalArgumentException if item is already present.
      * You may assume that item is never null. */
     void add(T item, double priority);
     /* Returns true if the PQ contains the given item. */

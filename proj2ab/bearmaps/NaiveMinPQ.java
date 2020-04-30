@@ -1,5 +1,3 @@
-package bearmaps;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.NoSuchElementException;
@@ -22,7 +20,7 @@ public class NaiveMinPQ<T> implements ExtrinsicMinPQ<T> {
     /** Note this method does not throw the proper exception,
      *  otherwise it is painfully slow (linear time).
      */
-    @oOverride
+    @Override
     public void add(T item, double priority) {
         items.add(new PriorityNode(item, priority));
     }
