@@ -23,9 +23,21 @@ public class SeparableEnemySolver {
      * Returns true if input is separable, false otherwise.
      */
     public boolean isSeparable() {
-        // TODO: Fix me
+        ArrayList<String> firstTeam = new ArrayList<>();
+        ArrayList<String> secondTeam = new ArrayList<>();
+        ArrayList<String> labelsList = new ArrayList<>(g.labels());
+        return isSeparable(labelsList,firstTeam,secondTeam);
+    }
+
+    private boolean isSeparable(List<String> labels, ArrayList<String> firstTeam, ArrayList<String> secondTeam) {
+        // If labels is empty, return true.
+        // Find to which team this node belongs to.
+        // Append this node to this team, all of it's neighbours to the other team.
+        // if there's conflict, return false.
+        // if not, labels.remove curr , isSeprable(labels,first,second).
         return false;
     }
+
 
 
     /* HELPERS FOR READING IN CSV FILES. */
