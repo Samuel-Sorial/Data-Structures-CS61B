@@ -23,21 +23,38 @@ public class SeparableEnemySolver {
      * Returns true if input is separable, false otherwise.
      */
     public boolean isSeparable() {
-        ArrayList<String> firstTeam = new ArrayList<>();
-        ArrayList<String> secondTeam = new ArrayList<>();
-        ArrayList<String> labelsList = new ArrayList<>(g.labels());
-        return isSeparable(labelsList,firstTeam,secondTeam);
+        Map<String, String> parties = new HashMap<>();
+        boolean result = true;
+        for (String v : g.labels()) {
+            if (!parties.containsKey(v)) {
+                String marker = "U";
+                result = dfs(v, parties, marker);
+                if (!result) break;
+            }
+        }
+        return result;
     }
-
-    private boolean isSeparable(List<String> labels, ArrayList<String> firstTeam, ArrayList<String> secondTeam) {
-        // If labels is empty, return true.
-        // Find to which team this node belongs to.
-        // Append this node to this team, all of it's neighbours to the other team.
-        // if there's conflict, return false.
-        // if not, labels.remove curr , isSeprable(labels,first,second).
-        return false;
+    private boolean dfs(String v, Map<String, String> parties, String marker) {
+        parties.put(v, marker);
+        for (String neighbour : g.neighbors(v)) {
+            if (parties.containsKey(neighbour)) {
+                String neighbourMarker = parties.get(neighbour);
+                if (neighbourMarker.equals(marker)) {
+                    return false;
+                }
+            } else {
+                if(!dfs(neighbour, parties, flipMarker(marker)))
+                    return false;
+            }
+        }
+        return true;
     }
-
+    private String flipMarker(String marker) {
+        if(marker.equals("V"))
+            return "U";
+        else
+            return "V";
+    }
 
 
     /* HELPERS FOR READING IN CSV FILES. */
@@ -99,3 +116,5 @@ public class SeparableEnemySolver {
     /* END HELPERS  FOR READING IN CSV FILES. */
 
 }
+
+
