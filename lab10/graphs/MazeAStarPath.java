@@ -1,4 +1,4 @@
-package lab11.graphs;
+package graphs;
 
 /**
  *  @author Josh Hug
