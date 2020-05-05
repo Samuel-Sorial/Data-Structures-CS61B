@@ -1,0 +1,7 @@
+1- Graphs:
+DFS:
+Pre order: A - B - C - F - D - E - F
+Post-order: F - C - B - E - D - A
+BFS: ABDCEF
+
+
