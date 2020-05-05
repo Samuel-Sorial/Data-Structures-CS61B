@@ -1,0 +1,3 @@
+Pleas note that this lab is not added to Spring 2019 website, so I went to 2018 website and found the lab that reflects on the graphs and found it lab 11. I copied lab 11 from 2018 to be
+lab10 here.
+The original lab: https://sp18.datastructur.es/materials/lab/lab11/lab11
