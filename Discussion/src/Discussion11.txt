@@ -1,0 +1,43 @@
+1- Graph Representations:
+1.1: Adjacency matrix:
+
+ Node
+    A  B  C  D  E  F  G
+ A  0  1  0  1  0  0  0
+ B  0  0  1  0  0  0  0
+ C  0  0  0  0  0  1  0
+ D  0  1  0  0  1  1  0
+ E  0  0  0  0  0  1  0
+ F  0  0  0  0  0  0  0
+ G  0  0  0  0  0  1  0
+
+ 1.2: Adjacency list:
+
+ A -> B -> D
+ B -> C
+ C -> F
+ D -> B -> E -> F
+ E -> F
+ F -> /
+ G -> F
+
+ If the graph was undirected then we could have a symmetry in the matrix and list.
+
+
+ 2- Topological Sorting:
+
+ 2.1-
+ GADEBCF
+
+2.2-
+Acyclic & Directed. DAGs
+
+
+3- Graph Algorithm Design:
+3.1-
+We mark the first node with u, all children with v, and flip at each step. If there's a marked node,
+check it's mark, if it's opposite then return false.
+
+3.2-
+Mark neighbour without visitng it!!!!
+
