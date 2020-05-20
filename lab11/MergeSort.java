@@ -13,9 +13,9 @@ public class MergeSort {
      */
     private static <Item extends Comparable> Item getMin(
             Queue<Item> q1, Queue<Item> q2) {
-        if (q1.isEmpty()) {
+        if (q1 == null || q1.isEmpty()) {
             return q2.dequeue();
-        } else if (q2.isEmpty()) {
+        } else if (q2 == null || q2.isEmpty()) {
             return q1.dequeue();
         } else {
             // Peek at the minimum item in each queue (which will be at the front, since the
@@ -42,8 +42,13 @@ public class MergeSort {
      */
     private static <Item extends Comparable> Queue<Queue<Item>>
             makeSingleItemQueues(Queue<Item> items) {
-        // Your code here!
-        return null;
+        Queue<Queue<Item>> newItems = new Queue<>();
+        for(Item i : items){
+            Queue<Item> curr = new Queue<>();
+            curr.enqueue(i);
+            newItems.enqueue(curr);
+        }
+        return newItems;
     }
 
     /**
@@ -61,8 +66,11 @@ public class MergeSort {
      */
     private static <Item extends Comparable> Queue<Item> mergeSortedQueues(
             Queue<Item> q1, Queue<Item> q2) {
-        // Your code here!
-        return null;
+        Queue<Item> mergedQueue = new Queue<>();
+        while (!q1.isEmpty() || !q2.isEmpty()){
+            mergedQueue.enqueue(getMin(q1, q2));
+        }
+        return mergedQueue;
     }
 
     /**
@@ -77,7 +85,20 @@ public class MergeSort {
      */
     public static <Item extends Comparable> Queue<Item> mergeSort(
             Queue<Item> items) {
-        // Your code here!
-        return items;
+        Queue<Queue<Item>> splittedItems = makeSingleItemQueues(items);
+        Queue<Item> result = new Queue<>();
+        while (!splittedItems.isEmpty()){
+            Queue<Item> newMerged = mergeSortedQueues(splittedItems.dequeue(), splittedItems.dequeue());
+            splittedItems.enqueue(newMerged);
+            if(splittedItems.size() == 1){
+                for(Queue<Item> curr : splittedItems){
+                    result.enqueue(curr.dequeue());
+                }
+                break;
+            }
+        }
+        return result;
     }
+
+
 }
