@@ -16,8 +16,13 @@ public class TestSortAlgs {
         q.enqueue(31);
         q.enqueue(166);
         q.enqueue(25);
-        QuickSort.quickSort(q);
-        Assert.assertTrue(isSorted(q));
+        q.enqueue(25);
+        q.enqueue(221);
+        q.enqueue(6);
+
+
+        Queue<Integer> test = QuickSort.quickSort(q);
+        Assert.assertTrue(isSorted(test));
     }
 
     @Test
